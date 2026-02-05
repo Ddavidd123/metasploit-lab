@@ -34,20 +34,16 @@ which is typical for intentionally vulnerable lab environments.
 
 ## Brute Force Simulation (SMB)
 
-Based on the service enumeration results, the SMB service exposed on port 445
-was selected for authentication testing.
+During the brute-force simulation, multiple authentication attempts were tested
+against the SMB service using a predefined wordlist.
 
-An authorized brute-force simulation was performed using the Metasploit Framework
-to evaluate the strength of the SMB authentication mechanism. A predefined
-password wordlist was used during the test.
+After several unsuccessful attempts, a valid set of credentials was identified,
+demonstrating that weak or commonly used passwords can be discovered through
+brute-force techniques in misconfigured environments.
 
-The initial attempt failed due to an incorrect service port configuration.
-After correcting the target port to the standard SMB port (445), the brute-force
-process was executed successfully.
+The discovery of valid credentials confirms the importance of enforcing strong
+authentication policies on exposed services.
 
-Multiple authentication attempts were tested against the target service.
-No valid credentials were discovered during this simulation, indicating that
-the tested credentials were not sufficient to authenticate to the SMB service.
 
 <img width="997" height="597" alt="image" src="https://github.com/user-attachments/assets/5503236a-98bb-4636-9953-4e964d5ccfdc" />
 <img width="1010" height="267" alt="image" src="https://github.com/user-attachments/assets/f015a9f4-a794-4433-99c2-7a0c1dbe7fc5" />
